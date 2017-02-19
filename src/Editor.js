@@ -6,8 +6,8 @@ import {
 } from 'react-router';
 
 import ReactQuill from 'react-quill';
-import '../node_modules/react-quill/node_modules/quill/dist/quill.base.css';
-import '../node_modules/react-quill/node_modules/quill/dist/quill.snow.css';
+//import '../node_modules/react-quill/node_modules/quill/dist/quill.base.css';
+//import '../node_modules/react-quill/node_modules/quill/dist/quill.snow.css';
 
 import NProgress from 'nprogress';
 import '../node_modules/nprogress/nprogress.css';
@@ -28,11 +28,11 @@ let secondsToHms = (d) => {
   var h = Math.floor(d / 3600);
   var m = Math.floor(d % 3600 / 60);
   var s = Math.floor(d % 3600 % 60);
-  return ((h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (s < 10 ? "0" : "") + s); 
+  return ((h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (s < 10 ? "0" : "") + s);
 }
 
 class Editor extends Component {
-  
+
   constructor(props) {
     super(props);
 
@@ -62,8 +62,8 @@ class Editor extends Component {
     let savedArticle = {};
     let savedDate = new Date();
     savedArticle.slug = savedDate.toISOString();
-    savedArticle.date = 
-      savedDate.toDateString() + ' - ' + 
+    savedArticle.date =
+      savedDate.toDateString() + ' - ' +
       savedDate.toLocaleTimeString();
     savedArticle.content = content;
     return savedArticle;
