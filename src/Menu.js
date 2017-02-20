@@ -60,7 +60,7 @@ class Menu extends Component {
   }
 
   componentDidMount(init = true) {
-    document.title = "Write";
+    document.title = "Jot";
     NProgress.done();
     document.querySelector(
       `.${this.indexToURL[this.state.menuIndex]}`
