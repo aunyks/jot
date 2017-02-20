@@ -23,7 +23,7 @@ class About extends Component {
           <p>The purpose of this is to get the user to write creatively for a set duration without any inhibition or distraction allowed. To achieve this, the editor lets one write for a specified duration, within which, if the user goes inactive, all that has been written is deleted completely. This forces the user to continuously write throughout the session, resulting in a rough draft of (a lot of) content that can then be revised/polished.</p>
           <p>All the functionality is client-side; it's a single-page app built with React and all saved data is only saved in localStorage.</p>
           <a href="https://github.com/aunyks/jot" className="extLink">/github</a>
-          <a href="http://aunyks.com" className="extLink">/me</a> 
+          <a href="http://www.aunyks.com" className="extLink">/me</a> 
        </div>
       </div>
     );
