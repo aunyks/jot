@@ -49,6 +49,13 @@ class Editor extends Component {
     ]) * 60) + 5;
 
     this.timerCleared = false;
+    this.prompts = [
+      'How do you feel when you love someone who does not love you back?',
+      'Write about two people seeing each other for the first time.',
+      'Write about being friends with someone.',
+      'Write about numbers that have special meaning to you.'
+    ];
+    this.prompt = this.prompts[Math.floor(Math.random() * this.prompts.length)]
   }
 
   onTextChange = (value) => {
@@ -161,13 +168,16 @@ class Editor extends Component {
     return (
       <div className="editorContainer fadeIn">
         <Link to="/" className="back">Back</Link>
+        <div style={{ margin: '0 auto', textAlign: 'center' }}>
+          <strong><p>{'Optional Prompt: '.concat(this.prompt) }</p></strong>
+        </div>
         <ReactQuill
           className="reactQuill"
           theme="snow"
           toolbar={false}
           value={this.state.content}
           onChange={this.onTextChange}/>
-        <div className="timer">
+        <div className="timer"> 
           <h1>{
             secondsToHms(
               this.duration - this.state.timeSinceStarted
