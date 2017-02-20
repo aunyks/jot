@@ -164,7 +164,7 @@ function addMiddleware(devServer) {
     // - /*.hot-update.json (WebpackDevServer uses this too for hot reloading)
     // - /sockjs-node/* (WebpackDevServer uses this for hot reloading)
     // Tip: use https://jex.im/regulex/ to visualize the regex
-    var mayProxy = /^(?!\/(index\.html$|.*\.hot-update\.json$|sockjs-node\/)).*$/;
+    var mayProxy = /^(?!\/(200\.html$|.*\.hot-update\.json$|sockjs-node\/)).*$/;
     devServer.use(mayProxy,
       // Pass the scope regex both to Express and to the middleware for proxying
       // of both HTTP and WebSockets to work without false positives.
